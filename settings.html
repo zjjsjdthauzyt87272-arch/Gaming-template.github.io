@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Settings — NEONFORGE</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">NEON<span>FORGE</span></div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="menu-panel" id="menuPanel">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="community.html">Community</a>
+      <a href="news.html">News</a>
+      <a href="platforms.html">Platforms</a>
+      <a href="profile.html">Profile</a>
+      <a href="login.html" class="menu-auth">Logout</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero hero-game" style="height:55vh">
+  <div class="hero-bg" style="background-image:url('assets/images/hero/game-hero.jpg')"></div>
+  <div class="hero-content">
+    <h1>Account <span>Settings</span></h1>
+    <p>Manage preferences and account options.</p>
+  </div>
+</section>
+
+<!-- SETTINGS -->
+<section class="section settings-page">
+
+  <div class="settings-box">
+
+    <h2 class="section-title">Account Information</h2>
+
+    <div class="setting-row">
+      <label>Email</label>
+      <input type="email" value="player@neonforge.com" disabled>
+    </div>
+
+    <div class="setting-row">
+      <label>Password</label>
+      <input type="password" value="password" disabled>
+    </div>
+
+    <h2 class="section-title">Preferences</h2>
+
+    <div class="setting-toggle">
+      <span>Dark Theme</span>
+      <input type="checkbox" checked>
+    </div>
+
+    <div class="setting-toggle">
+      <span>Email Notifications</span>
+      <input type="checkbox">
+    </div>
+
+    <div class="setting-actions">
+      <button class="btn primary">Save Changes</button>
+      <a href="profile.html" class="btn ghost">Cancel</a>
+    </div>
+
+  </div>
+
+</section>
+
+<footer class="footer">
+  © 2026 NEONFORGE. All rights reserved.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

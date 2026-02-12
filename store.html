@@ -1,0 +1,78 @@
+<!-- /store.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Store — NEONFORGE</title>
+       <!-- CSS -->
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- GSAP -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">NEON<span>FORGE</span></div>
+    <div class="menu-toggle" id="menuToggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<div class="menu-panel" id="menuPanel">
+  <a href="index.html">Home</a>
+  <a href="games.html">Games</a>
+  <a href="community.html">Community</a>
+  <a href="news.html">News</a>
+  <a href="platforms.html">Platforms</a>
+  <a href="login.html">Login / Sign up</a>
+</div>
+  
+  </div>
+</header>
+
+<section class="section">
+  <h2 class="section-title">Game Store</h2>
+
+  <div class="grid">
+    <div class="game-card">
+      <img src="assets/images/godfall-ascension.jpg"/>
+      <div class="overlay">
+        <h3>Godfall Ascension</h3>
+        <span>Action / Mythic</span>
+        <p>$59.99</p>
+        <button class="btn primary" style="margin-top:.5rem;">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="assets/images/frostborn-saga.jpg"/>
+      <div class="overlay">
+        <h3>Frostborn Saga</h3>
+        <span>RPG / Nordic</span>
+        <p>$49.99</p>
+        <button class="btn primary" style="margin-top:.5rem;">Buy Now</button>
+      </div>
+    </div>
+
+    <div class="game-card">
+      <img src="assets/images/war-of-titans.jpg"/>
+      <div class="overlay">
+        <h3>War of Titans</h3>
+        <span>Action / Story</span>
+        <p>$39.99</p>
+        <button class="btn primary" style="margin-top:.5rem;">Buy Now</button>
+      </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="copyright">© 2026 NEONFORGE</div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>

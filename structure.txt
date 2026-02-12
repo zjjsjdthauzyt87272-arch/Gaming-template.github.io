@@ -1,0 +1,55 @@
+/neonforge-gaming-template
+│
+├── index.html
+│
+├── pages/
+│   ├── games.html
+│   ├── game-details.html
+│   ├── play.html
+│   ├── buy-now.html
+│   ├── payment.html
+│   ├── platforms.html
+│   ├── community.html
+│   ├── forums.html
+│   ├── news.html
+│   ├── login.html
+│   ├── signup.html
+│   ├── custom-page.html        ← profile / settings / user pages base
+│   ├── faq.html
+│   ├── support.html
+│   └── 404.html
+│
+├── assets/
+│   ├── images/
+│   │   ├── hero/
+│   │   │   └── hero-bg.jpg
+│   │   │
+│   │   ├── games/
+│   │   │   ├── godfall-ascension.jpg
+│   │   │   ├── cyber-dominion.jpg
+│   │   │   ├── frostborn-saga.jpg
+│   │   │   ├── arena-x.jpg
+│   │   │   ├── nova-rift.jpg
+│   │   │   ├── shadow-realm.jpg
+│   │   │   ├── neon-streets.jpg
+│   │   │   ├── iron-reign.jpg
+│   │   │   ├── void-eclipse.jpg
+│   │   │   └── war-of-titans.jpg
+│   │   │
+│   │   ├── platforms/
+│   │   │   ├── steam.png
+│   │   │   ├── playstation.png
+│   │   │   ├── xbox.png
+│   │   │   └── mobile.png
+│   │
+│   └── fonts/
+│
+├── css/
+│   └── style.css          ← ONLY ONE CSS
+│
+├── js/
+│   └── main.js            ← ONLY ONE JS
+│
+├── README.md
+├── LICENSE.txt
+└── screenshot.jpg         ← demo preview image for selling

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile — NEONFORGE</title>
+
+  <link rel="stylesheet" href="style.css"/>
+
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+</head>
+
+<body>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">NEON<span>FORGE</span></div>
+
+    <div class="menu-toggle" id="menuToggle">
+      <span></span><span></span><span></span>
+    </div>
+
+    <div class="menu-panel" id="menuPanel">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="community.html">Community</a>
+      <a href="news.html">News</a>
+      <a href="platforms.html">Platforms</a>
+      <a href="settings.html">Settings</a>
+      <a href="login.html" class="menu-auth">Logout</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero hero-game" style="height:55vh">
+  <div class="hero-bg" style="background-image:url('assets/images/games/cyber-dominion.jpg')"></div>
+  <div class="hero-content">
+    <h1>Player <span>Profile</span></h1>
+    <p>Your achievements, stats, and identity.</p>
+  </div>
+</section>
+
+<!-- PROFILE -->
+<section class="section profile-page">
+
+  <div class="profile-card">
+    <div class="profile-avatar">
+      <img src="assets/images/ui/avatar-placeholder.png" alt="User Avatar">
+    </div>
+
+    <div class="profile-info">
+      <h2>Player_One</h2>
+      <p class="username">@neonplayer</p>
+
+      <p class="bio">
+        Competitive gamer. Mythic worlds. Neon chaos.
+      </p>
+
+      <div class="profile-stats">
+        <div>
+          <strong>12</strong>
+          <span>Games Owned</span>
+        </div>
+        <div>
+          <strong>48</strong>
+          <span>Achievements</span>
+        </div>
+        <div>
+          <strong>6</strong>
+          <span>Forums Posts</span>
+        </div>
+      </div>
+
+      <div class="profile-actions">
+        <a href="settings.html" class="btn primary">Edit Profile</a>
+        <a href="games.html" class="btn ghost">Browse Games</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<footer class="footer">
+  © 2026 NEONFORGE. All rights reserved.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

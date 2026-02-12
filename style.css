@@ -1,0 +1,781 @@
+/* /css/style.css — GOD OF WAR INSPIRED THEME */
+
+/* ===============================
+   CORE THEME VARIABLES
+================================ */
+:root {
+  --bg: #0b0b0c;
+  --panel: #141416;
+  --stone: #1c1d20;
+  --text: #e7e7e7;
+  --muted: #9a9a9a;
+
+  /* God of War accents */
+  --blood: #b11217;
+  --frost: #8fd3ff;
+  --gold: #c9a24d;
+
+  --glow-red: 0 0 25px rgba(177,18,23,.35);
+  --glow-frost: 0 0 25px rgba(143,211,255,.25);
+}
+
+/* ===============================
+   RESET
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #141416, #050506);
+  color: var(--text);
+  font-family: Inter, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===============================
+   NAVIGATION
+================================ */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,8,9,.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-family: Orbitron;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--blood);
+  text-shadow: var(--glow-red);
+}
+
+.nav nav a {
+  margin: 0 1.1rem;
+  font-weight: 500;
+  color: var(--muted);
+  position: relative;
+}
+
+.nav nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--blood);
+  transition: width .3s ease;
+}
+
+.nav nav a:hover {
+  color: var(--text);
+}
+
+.nav nav a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+.btn {
+  padding: .65rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: .5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.primary {
+  background: linear-gradient(135deg, #7c0f12, var(--blood));
+  color: #fff;
+  box-shadow: var(--glow-red);
+  margin-right: 1rem;
+}
+
+.primary:hover {
+  transform: translateY(-1px);
+}
+
+.ghost {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+
+/* ===============================
+   HERO SECTION
+================================ */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.9)),
+    radial-gradient(circle at 20% 10%, #2b0f12, transparent 60%),
+    url("../assets/images/god-bg.jpg") center / cover no-repeat;
+  filter: contrast(1.1) saturate(.8);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 760px;
+  padding-bottom: 5rem;
+}
+
+.hero h1 {
+  font-family: Orbitron;
+  font-size: 4.3rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.hero h1 span {
+  color: var(--blood);
+  text-shadow: var(--glow-red);
+}
+
+.hero p {
+  margin-top: 1rem;
+  margin-bottom: 2.2rem;
+  color: #cfcfcf;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+.section {
+  padding: 5.5rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-family: Orbitron;
+  font-size: 2.1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 3px;
+  background: var(--blood);
+  box-shadow: var(--glow-red);
+}
+
+/* ===============================
+   GAME CARDS
+================================ */
+.featured-track {
+  display: flex;
+  gap: 1.6rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.game-card {
+  position: relative;
+  background: linear-gradient(180deg, #1b1b1e, #0d0d0f);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.05);
+  cursor: pointer;
+}
+
+.game-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(177,18,23,.25), transparent);
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.game-card:hover::before {
+  opacity: 1;
+}
+
+.game-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(.2) contrast(1.1);
+}
+
+.game-card.wide {
+  min-width: 340px;
+  height: 210px;
+}
+
+.game-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.85), transparent 65%);
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.game-card h3 {
+  font-family: Orbitron;
+  letter-spacing: 1px;
+}
+
+.game-card span {
+  font-size: .85rem;
+  color: var(--gold);
+}
+
+/* ===============================
+   CATALOG
+================================ */
+.catalog .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 1.6rem;
+}
+
+.filters {
+  margin-bottom: 2.2rem;
+}
+
+.filters button {
+  background: none;
+  border: 1px solid #444;
+  color: var(--muted);
+  padding: .45rem 1.2rem;
+  border-radius: 20px;
+  margin-right: .5rem;
+  transition: all .3s;
+}
+
+.filters .active,
+.filters button:hover {
+  border-color: var(--blood);
+  color: var(--blood);
+  box-shadow: var(--glow-red);
+}
+
+/* ===============================
+   COMMUNITY
+================================ */
+.community {
+  background:
+    linear-gradient(to bottom, rgba(0,0,0,.7), rgba(0,0,0,.9)),
+    radial-gradient(circle at center, #200a0c, #050506);
+  text-align: center;
+}
+
+.community-box h2 {
+  font-family: Orbitron;
+  letter-spacing: 2px;
+}
+
+/* ===============================
+   NEWS
+================================ */
+.news-card {
+  background: linear-gradient(180deg, #161618, #0b0b0c);
+  border-radius: 18px;
+  padding: 1.7rem;
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+.news-card .date {
+  color: var(--blood);
+  font-size: .8rem;
+}
+
+/* ===============================
+   PLATFORMS
+================================ */
+.platform-icons {
+  display: flex;
+  justify-content: space-around;
+  font-family: Orbitron;
+  letter-spacing: 1px;
+}
+
+.platform-icons div {
+  opacity: .6;
+  transition: .3s;
+}
+
+.platform-icons div:hover {
+  opacity: 1;
+  color: var(--frost);
+  text-shadow: var(--glow-frost);
+}
+
+/* ===============================
+   FOOTER
+================================ */
+.footer {
+  background: #050506;
+  border-top: 1px solid rgba(255,255,255,.05);
+  padding: 3.5rem 1rem;
+}
+
+.footer a {
+  color: var(--muted);
+  transition: color .3s;
+}
+
+.footer a:hover {
+  color: var(--gold);
+}
+
+/* ===============================
+   3 DOT MENU (GOD OF WAR STYLE)
+================================ */
+.menu-toggle {
+  width: 34px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.menu-toggle span {
+  height: 4px;
+  width: 100%;
+  background: var(--blood);
+  border-radius: 2px;
+  box-shadow: var(--glow-red);
+  transition: .4s;
+}
+
+.menu-panel {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background: linear-gradient(180deg, #141416, #080809);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 180px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  box-shadow: 0 30px 80px rgba(0,0,0,.7);
+}
+
+.menu-panel.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.menu-panel a {
+  font-family: Orbitron;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: .9rem;
+  color: var(--muted);
+  transition: .3s;
+}
+
+.menu-panel a:hover {
+  color: var(--blood);
+  text-shadow: var(--glow-red);
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===============================
+   RESPONSIVE FIXES
+================================ */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+  }
+
+  .primary {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .featured-track {
+    gap: 1rem;
+  }
+}
+.section.featured {
+  margin-top: 4rem;
+}
+@media (min-width: 1024px) {
+  .hero {
+    padding-bottom: 6rem;
+  }
+}
+.platform-icons {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.platform {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+}
+
+.platform img {
+  width: 28px;
+  height: 28px;
+  filter: brightness(0) invert(1);
+  transition: transform 0.35s ease;
+}
+
+.platform span {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Hover effect */
+.platform:hover {
+  border-color: #b11226; /* God of War red */
+  box-shadow: 0 0 25px rgba(177, 18, 38, 0.35);
+  transform: translateY(-4px);
+}
+
+.platform:hover img {
+  transform: scale(1.15);
+}
+.platform:hover span {
+  color: #b11226;
+}
+@media (max-width: 600px) {
+  .platform-icons {
+    gap: 16px;
+  }
+}
+.platform img {
+  filter: drop-shadow(0 0 6px rgba(177,18,38,0.4));
+}
+
+.game-poster {
+  max-width: 300px;   /* controls poster size */
+  width: 100%;
+}
+
+.game-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+.btn.ghost {
+  position: relative;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: transparent;
+  overflow: hidden;
+  transition: color 0.35s ease, border-color 0.35s ease;
+}
+
+/* sliding glow layer */
+.btn.ghost::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(177,18,38,0.6),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+/* hover */
+.btn.ghost:hover {
+  color: #fff;
+  border-color: #b11226;
+  box-shadow: 0 0 25px rgba(177,18,38,0.5);
+}
+
+/* animate glow */
+.btn.ghost:hover::before {
+  transform: translateX(120%);
+}
+.btn:active {
+  transform: scale(0.97);
+}
+.btn.primary {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #7a0e1b,
+    #b11226,
+    #ff2a2a
+  );
+  color: #fff;
+  border: none;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(177,18,38,0.5),
+    inset 0 0 10px rgba(255,255,255,0.15);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* BLOOD PULSE LAYER */
+.btn.primary::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: radial-gradient(
+    circle at 30% 50%,
+    rgba(255,255,255,0.35),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* SHARP LIGHT SWEEP */
+.btn.primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -30%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+}
+
+/* HOVER */
+.btn.primary:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 20px 50px rgba(177,18,38,0.7),
+    inset 0 0 20px rgba(255,255,255,0.2);
+}
+
+.btn.primary:hover::before {
+  opacity: 1;
+}
+
+.btn.primary:hover::after {
+  transform: translateX(220%);
+}
+
+/* PRESS */
+.btn.primary:active {
+  transform: scale(0.96);
+  box-shadow:
+    0 10px 25px rgba(177,18,38,0.6),
+    inset 0 0 30px rgba(0,0,0,0.4);
+}
+/* =====================
+   PAYMENT PAGE
+===================== */
+.payment-page {
+  background: #0a0a0a;
+}
+
+.payment-container {
+  max-width: 1200px;
+  margin: 140px auto 80px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  padding: 0 40px;
+}
+
+.payment-game {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.payment-game img {
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+}
+
+.payment-info h1 {
+  font-size: 32px;
+}
+
+.payment-info p {
+  color: #aaa;
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 36px;
+  color: #b11226;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.payment-box {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 40px;
+  border-radius: 12px;
+}
+
+.payment-box h2 {
+  margin-bottom: 24px;
+}
+
+.pay-btn {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 14px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  border-color: #b11226;
+  box-shadow: 0 0 20px rgba(177,18,38,0.4);
+}
+
+.pay-btn.primary {
+  background: #b11226;
+  border: none;
+}
+
+.secure {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .payment-container {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-game {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+// PAYMENT METHOD HANDLER
+document.querySelectorAll('.pay-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const method = btn.getAttribute('data-method');
+    window.location.href = `payment.html?method=${method}`;
+  });
+});
+.hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden; /* 🚨 THIS IS IMPORTANT */
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;        /* fills without distortion */
+  background-position: center;   /* center crop */
+  background-repeat: no-repeat;
+  transform: scale(1.05);        /* cinematic zoom */
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.85)
+  );
+  z-index: 1;
+}
